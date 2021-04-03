@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Login & Registration Form</title>
+	<link rel="stylesheet" href="./css/Rform.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</buttton>
+				<button type="button" class="toggle-btn" onclick="register()">Register</buttton>
+	</div>
+	<div class="social-icons">
+		<img src="./img/fb.png">
+		<img src="./img/tw.png">
+		<script type="text/javascript">
+function image(img) {
+	import { google } from 'googleapis';
+
+const googleConfig = {
+  clientId: '911039464956-hfjdevj5bf18bvcgk8t37elt1mlg764j.apps.googleusercontent.com', // e.g. asdfghjkljhgfdsghjk.apps.googleusercontent.com
+  clientSecret: 'OzqENwdHLQblMKrps97l-gOG', // e.g. _ASDFA%DFASDFASDFASD#FAD-
+  redirect: 'https://alumniiwebsite.herokuapp.com/google-auth' // this must match your google api settings
+};
+
+/**
+ * Create the google auth object which gives us access to talk to google's apis.
+ */
+function createConnection() {
+  return new google.auth.OAuth2(
+    googleConfig.clientId,
+    googleConfig.clientSecret,
+    googleConfig.redirect
+  );
+}
+}
+</script>
+ 		<img src="./img/gm.png"  onclick="image(this)">
+	</div>
+	<form id="login" class="input-group">
+		<input type="text" class="input-field" id="uidL" placeholder="User Id" required>
+		<input type="password" class="input-field" id="pswdL" placeholder="Enter Password" required>
+		<input type="checkbox" class="check-box" ><span>Remember Password </span>
+		<button type="submit" class="submit-btn">Log In</button>
+	</form>
+	<form id="register" class="input-group">
+		<input type="text" class="input-field" id="uid" placeholder="User Id" required>
+		<input type="email" class="input-field" id="eid" placeholder="Email Id" required>
+		<input type="password" class="input-field" id="pswd" placeholder="Enter Password" required>
+		<input type="checkbox" class="check-box" ><span>I agree to the terms & conditions</span>
+		<button type="submit" class="submit-btn">Register</button>
+	</form>
+</div>
+
+</div>
+
+<script>
+	var x=document.getElementById("login");
+	var y=document.getElementById("register");
+	var z=document.getElementById("btn");
+
+	function register(){
+	x.style.left="-400px";
+	y.style.left="50px";
+	z.style.left="110px";
+}
+	function login(){
+	x.style.left="50px";
+	y.style.left="450px";
+	z.style.left="0px";
+}
+</script>
+
+<script src="register.js"></script>
+	</body>
+</html>

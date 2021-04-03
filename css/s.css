@@ -1,0 +1,138 @@
+
+{
+	padding:0;
+	margin:0;
+}
+body
+{
+	background-image:linear-gradient(rgba(0,0.2,0,0),rgba(0,0.1,0,0)),url(al_umni.jpg);
+	background-size: cover;
+	background-position: center;
+	box-sizing:border-box;
+	font-family: sans-serif ;
+	font-color:black;
+}
+.header{
+	background:#35424a;
+	color: #ffffff;
+	padding-top: 5px;
+	min-height: 20px;
+	border-bottom: #e8491d 3px solid;
+}
+.menu-bar :
+{
+	background:#e8491d;
+	text-align: center;
+	font-color:white;
+}
+.menu-bar ul
+{
+	display:inline-flex;
+	list-style:none;
+	color:white;
+}
+.menu-bar ul li
+{
+	width:120px;
+	margin:15px;
+	padding: 15px;
+}
+.menu-bar ul li a
+{
+	text-decoration: none;
+	color: white;
+}
+.active,.menu-bar ul li:hover
+{
+	background: #e8491d;
+	font-weight: bold;
+;
+	border-radius: 3px;
+}
+.menu-bar .fa
+{
+	margin-right: 8px;
+
+}
+.sub-menu-1
+{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1 
+{
+	display: block;
+	position: absolute;
+	background-color: #e8491d;
+	margin-top: 15px;
+	margin-left: -15px; 
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+	display: block;
+	margin: 5px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+	width: 150px;
+	padding: 5px;
+	border-bottom:1px dotted #fff; 
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover
+{
+	color:white;
+}
+.fa-anglw-right
+{
+	float: right;
+}
+.sub-menu-2
+{
+	display: none;
+}
+#menu8 {
+	width: 200px;
+	margin-top: 0px;
+}
+#menu8 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+}
+	
+#menu8 li a {
+	text-decoration: none;
+	text-align:left;
+    color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+  	height: 24px;
+	font-size:12px;
+	margin-bottom:2px;
+	border-radius:8px;
+}
+	
+#menu8 li a {
+	color: black;
+	display: block;	
+	background:  10px no-repeat  #e8491d;
+	padding: 12px 0 0 20px;
+}
+
+
+#menu8 li a:hover, .active_side {
+	color: black !important;
+	background: url(../Images/arrow.png) 16px no-repeat  white !important; 
+	padding: 8px 0 0 25px !important;
+	font-weight: bold;
+}
+.right_title{
+	font-weight: bold;
+	font-size: 30px;
+	text-align: left;
+}

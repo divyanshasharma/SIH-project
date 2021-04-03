@@ -1,0 +1,40 @@
+.section-search input{
+  padding: 5px;
+  font-size: 18px;
+  width: 90%;
+  border:#f4f4f4 3px solid ;
+}
+
+
+.social-icons{
+	text-align: center;
+}
+.social-icons img{
+	width: 30px ;
+	margin:0 12px;
+	box-shadow: 0 0 20px 0 #7f7f7f3d;
+	cursor:pointer;
+	border-radius: 50%;
+}
+
+footer{
+  padding: 8px;
+  margin-top: 8px;
+  	background-color: #e8491d;
+  text-align: center;
+}
+
+.section-follow{
+	margin :5px 10px;
+}
+.button_1{
+width:10%;
+  height: 50px;
+  color: teal;  display: inline-block;
+  margin-top: 2rem;
+  cursor: pointer; 
+   font-size:22px;
+  border-radius:8px;
+font-weight: bold;
+
+}
