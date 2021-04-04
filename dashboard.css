@@ -1,0 +1,288 @@
+{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Oswald','sans-serif';
+	font-size:1.0rem;
+	background: #f9f9f9;
+}
+a {
+	color:#333;
+	text-decoration: none;
+}
+.container {
+	max-width:1800px;
+	overflow: auto;
+	padding-top: 1rem ;
+padding-bottom: 1rem;
+}
+
+.main-header {
+	height: 10vh;
+	display: flex;
+	flex-direction:center;
+		text-align: center;
+	padding: 0.3rem;
+	align-items:center;
+	justify-content:center;
+}
+.main-header h1{
+	font-size: 3rem;
+	margin-bottom:1rem;
+	line-height: 1.2;
+}
+.main-header h1 span{
+	color:#e8491d;
+}
+.main-header p {
+	font-size: 2rem;
+}
+img{
+	width:100%;
+}
+.card1{
+	display: grid;
+	grid-template-columns:1fr 2fr;
+	grid-gap:2rem;
+	margin-bottom: 2rem;
+}
+
+.card1 h3{
+	margin-bottom: 2rem;
+}
+.card1 img{
+margin top:3rem;
+	height: 300px;
+}
+
+.card1 > div{
+	padding: 2rem;
+}
+.card1:nth-child(even) img{
+	order:2;
+}
+
+.card{
+	display: grid;
+	grid-template-columns:1fr;
+	grid-gap:2rem;
+	margin-bottom: 2rem;
+}
+
+.card h3{
+	margin-bottom: 2rem;
+}
+
+.card img{
+	height: 300px;
+}
+
+.card > div{
+	padding: 2rem;
+}
+
+.btn{
+	display: inline-block;
+	background: #e8491d;
+	color:#fff;
+	margin-top: 2rem;
+	cursor: pointer;	font-size:12px;
+	border-radius:8px;
+font-weight: bold;
+
+}
+
+.btn:hover{
+	opacity:0.8;
+}
+
+@media (max-width:600px) {
+	.card{
+		display: block;
+	} .card1{
+		display: block;
+	}
+
+}
+
+footer{
+	padding: 8px;
+margin-top: 8px;
+	color:#ffffff;
+	background-color: #e8491d;
+	text-align: center;
+}
+
+.social-icons{
+	text-align: center;
+}
+.social-icons img{
+	width: 30px ;
+	margin:0 12px;
+
+	box-shadow: 0 0 20px 0 #7f7f7f3d;
+	cursor:pointer;
+	border-radius: 50%;
+}
+header{
+	background:#35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #e8491d 3px solid;
+}
+header a{
+	color:#ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+header ul{
+	margin: 0;
+	padding: 0;
+}
+header li{
+	float :left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+header #branding{
+	float: left;
+}
+header #branding h1{
+	margin: 0;
+}
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+header .highlight, header .current a{
+	color:#e8491d;
+	font-weight: bold;
+}
+.highlight{
+	color:#e8491d;
+	font-weight: bold;
+}
+header a:hover{
+	color:#cccccc;
+	font-weight: bold;
+}
+#showcase{
+  width:100%;
+	box-sizing:border-box;
+display: flex;
+	justify-content:center;
+	align-items:center;
+	 flex-direction: column;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#aa{
+	float:right;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+@media (max-width:600px) {
+	.card{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: center;}
+  }
+
+.buttons li a {
+	text-decoration: none;
+	text-align:center;
+    color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+  	height: 50px;
+	font-size:14px;
+	border-radius:8px;
+font-weight: bold;
+}
+#menu8 {
+	width: 200px;
+	margin-top: 2px;
+}
+#menu8 ul {
+	list-style: none;
+	margin: 0;
+	padding: 0px;
+}
+
+#menu8 li a {
+	text-decoration: none;
+	text-align:left;
+    color:white;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+  	height: 35px;
+	font-size:12px;
+	margin-bottom:4px;
+	border-radius:8px;
+}
+
+#menu8 li a {
+	color: black;
+	display: block;
+	background:  10px no-repeat  #e8491d;
+	padding: 12px 10px 10px 12px;
+}
+
+
+#menu8 li a:hover, .active_side {
+	color: black !important;
+	background: url(../Images/arrow.png) 16px no-repeat  white !important;
+	padding: 8px 0 0 25px !important;
+	font-weight: bold;
+}

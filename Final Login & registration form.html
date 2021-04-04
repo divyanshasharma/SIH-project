@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="911039464956-hfjdevj5bf18bvcgk8t37elt1mlg764j.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<title> Login & Registration Form</title>
 	<link rel="stylesheet" href="./css/Rform.css">
 </head>
@@ -15,29 +20,36 @@
 	<div class="social-icons">
 		<img src="./img/fb.png">
 		<img src="./img/tw.png">
-		<script type="text/javascript">
-function image(img) {
-	import { google } from 'googleapis';
 
-const googleConfig = {
-  clientId: '911039464956-hfjdevj5bf18bvcgk8t37elt1mlg764j.apps.googleusercontent.com', // e.g. asdfghjkljhgfdsghjk.apps.googleusercontent.com
-  clientSecret: 'OzqENwdHLQblMKrps97l-gOG', // e.g. _ASDFA%DFASDFASDFASD#FAD-
-  redirect: 'https://alumniiwebsite.herokuapp.com/google-auth' // this must match your google api settings
-};
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
 
-/**
- * Create the google auth object which gives us access to talk to google's apis.
- */
-function createConnection() {
-  return new google.auth.OAuth2(
-    googleConfig.clientId,
-    googleConfig.clientSecret,
-    googleConfig.redirect
-  );
-}
-}
-</script>
- 		<img src="./img/gm.png"  onclick="image(this)">
+    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+    <script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+        console.log('User signed out.');
+        });
+    }
+    </script>
+
+    <script>
+    function onSignIn(googleUser) {
+        var id_token = googleUser.getAuthResponse().id_token;
+        // console.log(id_token);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/index');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function() {
+            console.log('Signed in as: ' + xhr.responseText);
+            if(xhr.responseText == 'success'){
+                signOut();
+                location.assign('/index')
+            }
+        };
+        xhr.send(JSON.stringify({token : id_token}));
+      }
+    </script>
 	</div>
 	<form id="login" class="input-group">
 		<input type="text" class="input-field" id="uidL" placeholder="User Id" required>

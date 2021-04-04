@@ -2,23 +2,19 @@ const express=require('express')
 const path=require('path')
 const User=require('./database/user-model.js')
 const auth=require('./auth.js')
+var cors = require('cors')
+var app = express()
+app.use(cors())
 require('./database/connect.js')
 const port=process.env.PORT||4000
 
-const app=express()
-
 app.use(express.static(__dirname))
-
-app.use(express.json())
 
 app.post('/users/login',async (req,res)=>{
     try{
-        
         const user=await User.findByCred(req.body.email,req.body.password)
         const token=await user.genAuthToken()
-        
         return res.send({user,token})
-           
     }
     catch(e){
         console.log(e)
@@ -64,3 +60,4 @@ app.get('*',(req,res)=>{
 app.listen(port,()=>{
     console.log(`Listening on port ${port}`)
 })
+
